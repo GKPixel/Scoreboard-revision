@@ -64,7 +64,7 @@ public class ConfigBoard extends BukkitRunnable {
     public void unhookPlayer(Player player) {
         playerToBoard.remove(player);
         players.remove(player);
-        player.setScoreboard(Objects.requireNonNull(Bukkit.getScoreboardManager()).getNewScoreboard());
+        player.setScoreboard(Objects.requireNonNull(Bukkit.getScoreboardManager()).getMainScoreboard());
     }
 
     @Override

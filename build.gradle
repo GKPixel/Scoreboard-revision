@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 repositories {
@@ -23,8 +24,13 @@ dependencies {
     implementation 'org.bstats:bstats-bukkit:2.2.1'
     implementation 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
     implementation 'me.clip:placeholderapi:2.10.9'
+    implementation 'fr.mrmicky:fastboard:1.2.0'
 }
 
-jar {
-    archiveFileName.set("Scoreboard.jar")
+shadowJar {
+    relocate 'fr.mrmicky.fastboard', 'rien.bijl.fastboard'
+    archiveFileName.set("Scoreboard-revision.jar")
+
 }
+
+tasks.build.dependsOn tasks.shadowJar

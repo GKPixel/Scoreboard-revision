@@ -52,7 +52,7 @@ public class ConfigBoard extends BukkitRunnable {
         players.add(player);
 
         try {
-            WrapperBoard wrapperBoard = new WrapperBoard("SCOREBOARD_DRIVER_V1");
+            WrapperBoard wrapperBoard = new WrapperBoard("SCOREBOARD_DRIVER_V2");
             wrapperBoard.setLineCount(rows.size());
             wrapperBoard.setPlayer(player);
             playerToBoard.put(player, wrapperBoard);
@@ -64,7 +64,6 @@ public class ConfigBoard extends BukkitRunnable {
     public void unhookPlayer(Player player) {
         playerToBoard.remove(player);
         players.remove(player);
-        player.setScoreboard(Objects.requireNonNull(Bukkit.getScoreboardManager()).getMainScoreboard());
     }
 
     @Override

@@ -28,7 +28,7 @@ public class ScoreboardDriverV1 implements IBoard {
         this.player = player;
 
         this.board = Objects.requireNonNull(Session.getSession().plugin.getServer().getScoreboardManager()).getMainScoreboard();
-        this.objective = this.board.registerNewObjective("sb1", "sb2");
+        this.objective = this.board.registerNewObjective("sb1", "dummy");
         this.objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         this.objective.setDisplayName("");
 

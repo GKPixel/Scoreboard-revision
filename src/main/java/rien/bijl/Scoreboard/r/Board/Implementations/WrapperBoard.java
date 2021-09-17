@@ -4,10 +4,11 @@ import org.bukkit.entity.Player;
 
 public class WrapperBoard implements IBoard {
 
-    private static final String DEFAULT = "rien.bijl.Scoreboard.rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V1.ScoreboardDriverV1";
+    private static final String DEFAULT = "rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V1.ScoreboardDriverV2";
 
     private static final String[][] DRIVERS = {
-            {"SCOREBOARD_DRIVER_V1", "rien.bijl.Scoreboard.rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V1.ScoreboardDriverV1"}
+            {"SCOREBOARD_DRIVER_V1", "rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V1.ScoreboardDriverV1"},
+            {"SCOREBOARD_DRIVER_V2", "rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V2.ScoreboardDriverV2"}
     };
 
     private IBoard child;

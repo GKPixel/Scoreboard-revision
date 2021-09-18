@@ -2,6 +2,7 @@ package rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V2;
 
 import fr.mrmicky.fastboard.FastBoard;
 import org.bukkit.entity.Player;
+import rien.bijl.Scoreboard.r.Board.Implementations.Drivers.V1.ScoreboardDriverV1;
 import rien.bijl.Scoreboard.r.Board.Implementations.IBoard;
 
 public class ScoreboardDriverV2 implements IBoard {
@@ -14,12 +15,11 @@ public class ScoreboardDriverV2 implements IBoard {
 
     @Override
     public void setLine(int line, String content) {
-        board.updateLine(line, content);
+        board.updateLine(line, ScoreboardDriverV1.split(content)[0]);
     }
 
     @Override
     public void setLineCount(int lines) {
-
     }
 
     @Override

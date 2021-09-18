@@ -71,7 +71,7 @@ public class ScoreboardDriverV1 implements IBoard {
         team.setSuffix(split[1]);
     }
 
-    private String[] split(String line)
+    public static String[] split(String line)
     {
         if (line.length() < LineLimits.getLineLimit()) {
             return new String[]{line, ""};

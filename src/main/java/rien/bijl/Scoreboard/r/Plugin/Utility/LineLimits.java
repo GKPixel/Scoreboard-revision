@@ -15,7 +15,7 @@ public class LineLimits {
         if (minor >= 13) {
             lineLimit = 64;
         } else {
-            lineLimit = 16;
+            lineLimit = 30;
         }
 
         return lineLimit;
